@@ -5,6 +5,9 @@ date:   2020-06-17 17:45:00 -0400
 categories: teardown
 ---
 Chauvet DJ SM250 Snow Machine Teardown and Fix
+
+![image tooltip here](/assets/images/snow_full.jpg)
+
 This year I was Hoping to spice up my yearly Christmas lights display show by adding some new DMX enabled effects. The idea is to get items in the form of mass-produced stage equipment,  which can be cheaper than purpose built “Holiday Lighting” products, while also being more robust and configurable. 
 Living in the Southern U.S. where white Christmases do not exist, a snow machine was a great first choice. If you do not know how one of these machines work, the YouTube channel bigclivedotcom has an excellent short video on how they work : https://www.youtube.com/watch?v=s_gkSbQXKH8. I opted to purchase a used Chauvet DJ SM250 Snow Machine (https://www.chauvetdj.com/products/sm-250/). 
 Unfortunately, because I did not buy this product new, this teardown must be taken with a grain of salt (However unlikely, I do not know what modifications the previous owner could have made). It is a good look though at how a lightly used machine looks a year after it’s manufacturing date. 
