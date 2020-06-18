@@ -4,7 +4,6 @@ title:  "SM250 Teardown and Fix"
 date:   2020-06-17 17:45:00 -0400
 categories: teardown
 ---
-Chauvet DJ SM250 Snow Machine Teardown and Fix
 
 ![Assembled Machine](/assets/images/snow_full.jpg)
 
@@ -64,6 +63,7 @@ The fluid pump also looks to be a standard part, and replacements with the same 
 The main circuit board is a reuse of a fog machine controller, as indicated by its part number and the unused thermometer connections. The microcontroller is a nuvoton [NUC029LAN](https://www.nuvoton.com/products/microcontrollers/arm-cortex-m0-mcus/nuc029-series/nuc029lan/?__locale=en) ARM microcontroller, and there seems to be adequate isolation on the board. Thankfully, the relay used to switch the blower motor on and off is rated above what is necessary (16A @125V), probably due to it originally needing to switch a high-powered fog machine heater, and they didn’t change it for this design. Being an indoor only product there is no waterproofing of any kind on any of the PCBs. A DIY conformal coating might be a good addition in the future if you are hoping to use this in a high humidity environment. Something good see is the red "glue" affixing all of the inter-PCB connectors to their sockets. This means you're less likely to run into an issue with wires disconnecting due to vibration from operation or shipping.
 
 ![Snow Fluid Sensor](/assets/images/snow_fluid_sensor_2.jpg)
+
 ![Snow Fluid Sensor](/assets/images/snow_fluid_sensor.jpg)
 
 This is the simple optical sensor that is being used to detect fluid runout. I did not do any probing on this, but I suspect it would be simple to bypass if you were having issues with it. 
@@ -71,6 +71,7 @@ This is the simple optical sensor that is being used to detect fluid runout. I d
 I have also included pictures of the DMX and display breakout boards if they are of interest to anyone. 
 
 ![Display PCB](/assets/images/snow_display_PCB.jpg)
+
 ![DMX PVB](/assets/images/snow_dmx_PCB.jpg)
 
 Overall, I feel confident in the safety of the machine now. It is also nice to know how simple the insides are, allowing me to replace every part that could fail with relative ease. Even designing a new DMX control board would be trivial if it came down to it. I hope this helps anyone on the fence purchasing one of these machines and can help anyone having issues. 
