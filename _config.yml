@@ -29,7 +29,7 @@ twitter_username: HNielson
 github_username:  HunterNielson
 
 # Build settings
-theme: jekyll-theme-midnight
+theme: minima
 plugins:
   - jekyll-feed
 
