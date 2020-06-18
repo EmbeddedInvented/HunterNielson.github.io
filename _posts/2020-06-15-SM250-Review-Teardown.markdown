@@ -33,6 +33,8 @@ First, I took off the sock to reveal the sintered bronze “filter” that is us
 
 The machine opens and does not have much to it. Every part is metal, thanks to the case being clearly a reused fog machine platform, which would need to have the higher heat tolerances. I pulled out the switch, which I initially thought had black silicone on it, but was just the switch housing being melted. (unfortunately, I did not take a good picture of this before misplacing the switch, but you can see the melted plastic on the rightmost terminal).  This was very concerning considering the machine is fused, and the fuse should blow before any other component fails. I checked the fuse and it was properly rated for what was printed on the machine (The fuse holder also includes a second replaceable fuse, big plus!). The melted switch on my machine was a 10A @125V SPDT rocker switch. All this switch does is route the electricity going to the blower through a resistor or not to change the speed of the motor. 
 
+![Melted Speed Switch](/assets/images/snow_melted_switch.jpg)
+
 I bypassed this switch and the blower turned on as expected and seemed to be working perfect with no burning smell or weird sounds. I was still worried about what caused the switch to melt though so I decided to open the blower casing and inspect the motor.
 
 ![Snow blower Enclosure](/assets/images/snow_blower_enclosure.jpg)
@@ -55,13 +57,21 @@ Something interesting I found was the design of their blower motor housing. It i
 
 ![Snow fluid pump](/assets/images/snow_pump.jpg)
 
-The fluid pump also looks to be a standard part, and replacements with the same specifications look to be readily available. The motor is rated for 1 minute on, and then one minute off, however you can easily set the machine to be continuously on and is not discouraged in the documentation. This could cause the motor to die prematurely, but it is possible Chauvet DJ did the necessary validation to prove this pump is capable of continuous use in this situation. 
+The fluid pump also looks to be a standard part, and replacements with the same specifications look to be readily available. The motor is rated for one minute on, and then one minute off, however you can easily set the machine to be continuously on and is not discouraged in the documentation. This could cause the motor to die prematurely, but it is possible Chauvet DJ did the necessary validation to prove this pump is capable of continuous use in this situation. 
 
-The main circuit board is a reuse of a fog machine controller, as indicated by its part number and the unused thermometer connections. Thankfully, the relay used to switch the blower motor on and off is rated well above what is necessary, probably due to it originally needing to switch a high-powered fog machine heater, and they didn’t change it. Being an indoor only product there is no waterproofing of any kind on any of the PCBs. A DIY conformal coating might be a good addition in the future if you are hoping to use this in a high humidity environment. 
+![Main PCB](/assets/images/snow_main_PCB.jpg)
+
+The main circuit board is a reuse of a fog machine controller, as indicated by its part number and the unused thermometer connections. The microcontroller is a nuvoton [https://www.nuvoton.com/products/microcontrollers/arm-cortex-m0-mcus/nuc029-series/nuc029lan/?__locale=en](NUC029LAN) ARM microcontroller, and there seems to be adequate isolation on the board. Thankfully, the relay used to switch the blower motor on and off is rated above what is necessary (16A @125V), probably due to it originally needing to switch a high-powered fog machine heater, and they didn’t change it for this design. Being an indoor only product there is no waterproofing of any kind on any of the PCBs. A DIY conformal coating might be a good addition in the future if you are hoping to use this in a high humidity environment. Something good see is the red "glue" affixing all of the inter-PCB connectors to their sockets. This means you're less likely to run into an issue with wires disconnecting due to vibration from operation or shipping.
+
+![Snow Fluid Sensor](/assets/images/snow_fluid_sensor_2.jpg)
+![Snow Fluid Sensor](/assets/images/snow_fluid_sensor.jpg)
 
 This is the simple optical sensor that is being used to detect fluid runout. I did not do any probing on this, but I suspect it would be simple to bypass if you were having issues with it. 
 
-I have included pictures of the various breakout boards if they are of interest to anyone. 
+I have also included pictures of the DMX and display breakout boards if they are of interest to anyone. 
+
+![Display PCB](/assets/images/snow_display_PCB.jpg)
+![DMX PVB](/assets/images/snow_dmx_PCB.jpg)
 
 Overall, I feel confident in the safety of the machine now. It is also nice to know how simple the insides are, allowing me to replace every part that could fail with relative ease. Even designing a new DMX control board would be trivial if it came down to it. I hope this helps anyone on the fence purchasing one of these machines and can help anyone having issues. 
 
